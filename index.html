@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="stage">
+
+    <div class="clock" id="clock">
+      <span class="unit" id="hours">10</span>
+      <span class="sep">:</span>
+      <span class="unit" id="minutes">00</span>
+      <span class="sep">:</span>
+      <span class="unit" id="seconds">00</span>
+    </div>
+
+    <div class="label" id="statusLabel">ready</div>
+
+  </main>
+
+  <section class="panel">
+
+    <div class="presets" id="presets">
+      <button class="preset-btn" data-hours="0.5">30m</button>
+      <button class="preset-btn" data-hours="1">1h</button>
+      <button class="preset-btn active" data-hours="10">10h</button>
+      <button class="preset-btn" data-hours="24">24h</button>
+    </div>
+
+    <div class="custom-row">
+      <label class="field">
+        <span>hrs</span>
+        <input type="number" id="customHours" min="0" max="999" value="0">
+      </label>
+      <label class="field">
+        <span>min</span>
+        <input type="number" id="customMinutes" min="0" max="59" value="0">
+      </label>
+      <label class="field">
+        <span>sec</span>
+        <input type="number" id="customSeconds" min="0" max="59" value="0">
+      </label>
+      <button id="setCustom" class="ghost-btn">Set</button>
+    </div>
+
+    <div class="controls">
+      <button id="startPause" class="primary-btn">Start</button>
+      <button id="reset" class="ghost-btn">Reset</button>
+    </div>
+
+    <div class="opacity-row">
+      <span>text opacity</span>
+      <input type="range" id="opacitySlider" min="15" max="100" value="100">
+      <span id="opacityValue">100%</span>
+    </div>
+
+  </section>
+
+  <button class="panel-toggle" id="panelToggle" aria-label="Toggle controls">⋯</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
